@@ -99,6 +99,64 @@
     .border-bottom-left-radius(@radius);
 }
 
+//
+// Transform
+//
+.rotate(x, @deg) {
+	-webkit-transform: rotateX(@deg);
+	-moz-transform: rotateX(@deg);
+	-o-transform: rotateX(@deg);
+	-ms-transform: rotateX(@deg);
+	transform: rotateX(@deg);
+}
+
+.rotate(y, @deg) {
+	-webkit-transform: rotateY(@deg);
+	-moz-transform: rotateY(@deg);
+	-o-transform: rotateY(@deg);
+	-ms-transform: rotateY(@deg);
+	transform: rotateY(@deg);
+}
+
+.rotate(z, @deg) {
+	-webkit-transform: rotateZ(@deg);
+	-moz-transform: rotateZ(@deg);
+	-o-transform: rotateZ(@deg);
+	-ms-transform: rotateZ(@deg);
+	transform: rotateZ(@deg);
+}
+
+.translate(x, @px) {
+	-webkit-transform: translateX(@px);
+	-moz-transform: translateX(@px);
+	-o-transform: translateX(@px);
+	-ms-transform: translateX(@px);
+	transform: translateX(@px);
+}
+
+.translate(y, @px) {
+	-webkit-transform: translateY(@px);
+	-moz-transform: translateY(@px);
+	-o-transform: translateY(@px);
+	-ms-transform: translateY(@px);
+	transform: translateY(@px);
+}
+
+.translate(z, @px) {
+	-webkit-transform: translateZ(@px);
+	-moz-transform: translateZ(@px);
+	-o-transform: translateZ(@px);
+	-ms-transform: translateZ(@px);
+	transform: translateZ(@px);
+}
+
+.scale3d(@sx, @sy, @sz) {
+	-webkit-transform: scale3d(@sx,@sy,@sz);
+	-moz-transform: scale3d(@sx,@sy,@sz);
+	-o-transform: scale3d(@sx,@sy,@sz);
+	-ms-transform: scale3d(@sx,@sy,@sz);
+	transform: scale3d(@sx,@sy,@sz);
+}
 
 //
 // Transition
@@ -125,6 +183,28 @@
         -moz-transition-property: @property;
         -o-transition-property: @property;
         transition-property: @property;
+}
+
+.transition-property(@property1, @property2) {
+        -webkit-transition-property: @arguments;
+        -moz-transition-property: @arguments;
+        -o-transition-property: @arguments;
+        transition-property: @arguments;
+}
+
+.transition-property(transform) {
+		-webkit-transition-property: -webkit-transform;
+		-moz-transition-property: -moz-transform;
+		-o-transition-property: -o-transform;
+		transition-property: transform;
+}
+
+.transition-property(transform, @property) {
+	-webkit-transition-property: -webkit-transform, @property;
+	-moz-transition-property: -moz-transform, @property;
+	-o-transition-property: -o-transform, @property;
+	transition-property: transform, @property;
+
 }
 
 .transition-duration(@duration: @transition-duration) {
