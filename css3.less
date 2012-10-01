@@ -102,6 +102,31 @@
 //
 // Transform
 //
+
+.transform-origin(@ax, @ay) {
+	-webkit-transform-origin: @ax @ay;
+	-moz-transform-origin: @ax @ay;
+	-o-transform-origin: @ax @ay;
+	-ms-transform-origin: @ax @ay;
+	transform-origin: @ax @ay;
+}
+
+.transform-origin(@ax, @ay, @az) {
+	-webkit-transform-origin: @ax @ay @az;
+	-moz-transform-origin: @ax @ay @az;
+	-o-transform-origin: @ax @ay @az;
+	-ms-transform-origin: @ax @ay @az;
+	transform-origin: @ax @ay @az;
+}
+
+.rotate(@deg) {
+	-webkit-transform: rotate(@deg);
+	-moz-transform: rotate(@deg);
+	-o-transform: rotate(@deg);
+	-ms-transform: rotate(@deg);
+	transform: rotate(@deg);
+}
+
 .rotate(x, @deg) {
 	-webkit-transform: rotateX(@deg);
 	-moz-transform: rotateX(@deg);
